@@ -18,26 +18,33 @@
 
 
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+ import { getAuth } from 'firebase/auth';
+   // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
-<script>
+  // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyA-ZGz0GkdeyULipkALJbb0D2U85cBt1cc",
-  authDomain: "login-d0713.firebaseapp.com",
-  projectId: "login-d0713",
-  storageBucket: "login-d0713.appspot.com",
-  messagingSenderId: "441912840000",
-  appId: "1:441912840000:web:07b76c4eda4d27cd65f4a5",
-  measurementId: "G-YS140GJMT6"
-};
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-</script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyA-ZGz0GkdeyULipkALJbb0D2U85cBt1cc",
+    authDomain: "login-d0713.firebaseapp.com",
+    projectId: "login-d0713",
+    storageBucket: "login-d0713.appspot.com",
+    messagingSenderId: "441912840000",
+    appId: "1:441912840000:web:07b76c4eda4d27cd65f4a5",
+    measurementId: "G-YS140GJMT6"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+   const auth = getAuth(firebaseApp);
+   
+   
+   }
+
 <script src="NumberAuthentication.js" type="text/javascript"></script>
 </body>
 </html>
